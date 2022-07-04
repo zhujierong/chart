@@ -1,0 +1,31 @@
+{
+    // 编译规则
+    "compilerOptions": {
+        // "outDir": "./dist/",
+        // "outFile": "./dist/main.js", // 将代码合并到一个文件中
+        "noImplicitAny": true,
+        "target": "es5",
+        // "module": "es2015", // 指定使用的模块类型，[commonjs, amd, system, umd, es2015, esnext, none]
+        // 指定能使用的库, 如浏览器要使用 dom
+        // "lib": [
+        //     "es2015",
+        //     "dom"
+        // ],
+        "jsx": "react-jsx",
+        "baseUrl": "./",
+        "strict": true, // 严格模式
+        "esModuleInterop": true,
+        "paths": {
+            "@": ["/"],
+            "@assets": ["assets"],
+            "@api": ["src/api"],
+            "@common": ["src/common"],
+            "@component": ["src/component"]
+        }
+    },
+    "include": [
+        "src",
+        "config/resource.d.ts" // 增加导入模块支持
+    ],
+    "exclude": ["node_modules"]
+}
